@@ -6,7 +6,7 @@ app = Flask(__name__)
 UPLOAD_FOLDER = 'uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.config['ALLOWED_EXTENSIONS'] = {'xlsx', 'xls'}
+app.config['ALLOWED_EXTENSIONS'] = {'xlsx', 'xls', 'csv'}
 
 
 def allowed_file(filename):
