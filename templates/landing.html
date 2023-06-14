@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics Made Easy</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        .main {
+            height: 100vh;
+            background-color: #0056b3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 26px;
+
+        }
+
+        .banner {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            display: flex;
+            border-radius: 26px;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .banner h1 {
+            font-size: 40px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .banner p {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        .upload-link {
+            font-size: 18px;
+            color: #fff;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .upload-link:hover {
+            background-color: #0056b3;
+        }
+
+        .feature-card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .feature-card i {
+            font-size: 40px;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .feature-card h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .banner-image {
+            width: 400px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="container">
+            <div class="banner">
+                <div class="banner-content">
+                    <h1>Data Analytics Made Easy</h1>
+                    <p>Perform powerful analysis on your data with ease</p>
+                    <a href="/upload" class="upload-link">Upload Your Excel Sheet</a>
+                </div>
+                <img src="/static/images/landing-img.png" alt="Banner Image" class="banner-image">
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="bi bi-bar-chart"></i>
+                        <h3>Data Visualization</h3>
+                        <p>Create stunning charts and graphs to visualize your data.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="bi bi-search"></i>
+                        <h3>Natural Language Queries</h3>
+                        <p>Write queries in plain English and get instant results.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="bi bi-database"></i>
+                        <h3>Data Analysis</h3>
+                        <p>Perform in-depth analysis on your dataset with advanced statistical techniques.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

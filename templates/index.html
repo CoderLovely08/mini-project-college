@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Upload Excel File - Landing Page</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
+
+        .main {
+            height: 100vh;
+            background-color: #0056b3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .container {
@@ -94,6 +97,29 @@
             color: #888888;
         }
     </style>
+
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="container">
+            <h1>Welcome to the File Upload Landing Page</h1>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <div class="upload-button">
+                    <label for="file" class="custom-file-upload">Choose File</label>
+                    <input type="file" id="file" name="file" accept=".xlsx, .xls">
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-bar-inner"></div>
+                </div>
+                <div class="upload-button">
+                    <input type="submit" value="Submit">
+                </div>
+                <div class="error-message"></div>
+            </form>
+        </div>
+    </div>
     <script>
         function updateProgressBar() {
             var progressBar = document.querySelector('.progress-bar-inner');
@@ -102,13 +128,13 @@
             var fileSize = file.size;
 
             var reader = new FileReader();
-            reader.onloadend = function(e) {
+            reader.onloadend = function (e) {
                 var loaded = e.loaded;
                 var progress = loaded / fileSize * 100;
                 progressBar.style.width = progress + '%';
             };
 
-            reader.onprogress = function(e) {
+            reader.onprogress = function (e) {
                 if (e.lengthComputable) {
                     var loaded = e.loaded;
                     var progress = loaded / fileSize * 100;
@@ -129,7 +155,7 @@
             return true;
         }
 
-        window.addEventListener('DOMContentLoaded', function() {
+        window.addEventListener('DOMContentLoaded', function () {
             var fileInput = document.querySelector('input[type="file"]');
             fileInput.addEventListener('change', updateProgressBar);
 
@@ -137,26 +163,6 @@
             form.addEventListener('submit', validateFileUpload);
         });
     </script>
-</head>
-<body>
-    <div class="container">
-        <h1>Welcome to the File Upload Landing Page</h1>
-        <form action="/upload" method="post" enctype="multipart/form-data">
-            <div class="upload-button">
-                <label for="file" class="custom-file-upload">Choose File</label>
-                <input type="file" id="file" name="file" accept=".xlsx, .xls">
-            </div>
-            <div class="progress-bar">
-                <div class="progress-bar-inner"></div>
-            </div>
-            <div class="upload-button">
-                <input type="submit" value="Submit">
-            </div>
-            <div class="error-message"></div>
-        </form>
-    </div>
-    <div class="footer">
-        <p>Powered by Flask</p>
-    </div>
 </body>
+
 </html>
